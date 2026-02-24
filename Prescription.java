@@ -1,11 +1,12 @@
-// The Prescription class represents a prescription issued by a doctor for a patient
+// Superclass, The Prescription class represents a prescription issued by a doctor for a patient
 public class Prescription {
     private int id = 1;
     private String doctor = "REFRENCE DOCTOR CLASS";
     private String patient = "REFRENCE PATIENT CLASS";
-    private String medication = "Medication Name";
+    private String medication = "REFRENCE MEDICATION CLASS";
     private String prescriptionExpiry = "00/00/0000";
 
+    // Constructor
     public Prescription(int id, String doctor, String patient, String medication, String prescriptionExpiry) {
         this.id = id;
         this.doctor = doctor;
@@ -52,5 +53,9 @@ public class Prescription {
 
     public void setPrescriptionExpiry(String prescriptionExpiry) {
         this.prescriptionExpiry = prescriptionExpiry;
+    }
+
+    public String toString() {
+        return "ID: " + id + " Doctor: " + doctor + " Patient: " + patient + " Medication: " + medication + " Prescription Expiry: " + prescriptionExpiry;
     }
 }
